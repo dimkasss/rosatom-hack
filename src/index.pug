@@ -1,10 +1,13 @@
 -
+
   var blueOrbs = new Array(11)
   var orangeOrbs = new Array(11)
+//- TODO: naming orbs -> atoms
 
 doctype html
 html(lang="ru")
   head
+    // TODO: change title, description, keywords and open graph data as well
     title Хакатон 2023
  
     meta(charset="UTF-8")
@@ -56,6 +59,7 @@ html(lang="ru")
         img(src="https://top-fwz1.mail.ru/counter?id=3319382;js=na" style="position:absolute;left:-9999px;" alt="Top.Mail.Ru")
     //- <!-- /Top.Mail.Ru counter -->
 
+    // TODO: change image_src and icon images
     link(rel="image_src" href="og_image.png")
     link(rel="icon" href="./assets/favicon.png")
     link(rel="stylesheet" href="./style.scss")
@@ -71,6 +75,7 @@ html(lang="ru")
       include mixins/registration
       include mixins/page-footer
     .orbs
+      // TODO: naming orbs -> atoms
       each val in blueOrbs
         include assets/orbs/orb1.svg
       each val in orangeOrbs
