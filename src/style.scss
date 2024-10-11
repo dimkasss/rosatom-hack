@@ -45,7 +45,7 @@
 	--wrapper-height: 0px;
 }
 
-.orbs {
+.atoms {
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -57,12 +57,12 @@
 	margin: 0;
 }
 
-.orbs > svg {
+.atoms > svg {
 	position: absolute;
 	padding: 0;
 }
 
-.orbs > svg:nth-child(odd) {
+.atoms > svg:nth-child(odd) {
 	max-width: 25%;
 	animation: fly 50s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
 	@media (max-width: 800px) {
@@ -71,7 +71,7 @@
 	}
 }
 
-.orbs > svg:nth-child(even) {
+.atoms > svg:nth-child(even) {
 	max-width: 25%;
 	animation: flyReverse 40s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
 	@media (max-width: 800px) {
@@ -81,25 +81,25 @@
 	}
 }
 
-.orbs > svg:nth-child(3n - 1) {
+.atoms > svg:nth-child(3n - 1) {
 	max-width: 15%;
 	filter: blur(10px);
 }
 
-.orbs > svg:nth-child(3n - 2) {
+.atoms > svg:nth-child(3n - 2) {
 	animation-delay: -4s;
 	filter: blur(3px) grayscale(0);
 }
 
-.orbs > svg:nth-child(5n) {
+.atoms > svg:nth-child(5n) {
 	max-width: 60%;
 	filter: blur(0) grayscale(0);
 }
-// .orbs > svg:nth-child(5n-1) {
+// .atoms > svg:nth-child(5n-1) {
 // 	filter: hue-rotate(58deg);
 // }
 
-.orbs > svg:nth-child(3n) {
+.atoms > svg:nth-child(3n) {
 	animation-delay: -7s;
 }
 
@@ -157,12 +157,12 @@ body {
 	width: 100%;
 	//max-width: 1600px;
 	font-family: Inter;
-	background: #151515;
+	background: $main-black;
 	overflow-x: hidden;
 	height: 100%;
 }
 
-body > div:not(.orbs) {
+body > div:not(.atoms) {
 	position: relative;
 	z-index: 1;
 }
@@ -200,8 +200,8 @@ span.button {
 			rgba(242, 242, 242, 0.25) 22.52%,
 			rgba(242, 242, 242, 0.05) 83.16%
 		),
-		#f90;
-	box-shadow: 0px 4px 15px 0px rgba(255, 153, 0, 0.5);
+		$accent;
+	box-shadow: 0px 4px 15px 0px $accent-light;
 	transition: box-shadow 0.2s;
 	&:hover {
 		box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.25);
@@ -224,6 +224,7 @@ a {
 	color: #f2f2f2;
 	text-decoration: none;
 	transition: color 0.2s;
+	// TODO: change colors
 	&:hover {
 		color: #ffad31;
 	}
@@ -283,7 +284,7 @@ h2 {
 	position: relative;
 	color: transparent;
 	// -webkit-text-stroke: 1px #0077ff;
-	text-shadow: 10px 10px 20px rgba(255, 153, 0, 0.4);
+	text-shadow: 10px 10px 20px rgba(119, 119, 119, 0.4);
 	//text-shadow: -1px 1px 0 #0077ff, 1px 1px 0 #0077ff, 1px -1px 0 #0077ff, -1px -1px 0 #0077ff;
 	margin: 0;
 	padding-top: 0px;

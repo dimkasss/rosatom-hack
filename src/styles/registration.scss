@@ -139,6 +139,7 @@
 
 #registration-section form input[type='number'] {
 	-moz-appearance: textfield;
+	appearance: textfield;
 }
 
 #registration-section form input[type='radio'] {
@@ -187,7 +188,7 @@
 			height: 24px;
 			padding: 2px;
 			display: inline-block;
-			border: 2px solid #d78102;
+			border: 2px solid $text-normal;
 			border-radius: 25px;
 			padding: 3px;
 		}
@@ -195,7 +196,7 @@
 }
 
 #registration-section form input:checked ~ .checkmark::before {
-	background: #d78102;
+	background: $text-normal;
 }
 
 .error {
@@ -222,7 +223,7 @@
 	max-width: 100%;
 	padding: 0;
 	margin: 0;
-	color: #d78102;
+	color: $text-normal;
 }
 input:not(:invalid) + .error {
 	display: none;
