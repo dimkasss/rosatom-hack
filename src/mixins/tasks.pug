@@ -32,7 +32,7 @@ mixin task(data)
         span.button.taskButton Выбрать кейс
 
 section.tasks#tasks-section
-  h2.tasks__header Задачи
+  h2.tasks__header.neon Задачи
   .tasks__content
     each singleTask in tasks_data
       +task(singleTask)

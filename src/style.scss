@@ -93,7 +93,7 @@
 
 .atoms > svg:nth-child(5n) {
 	max-width: 60%;
-	filter: blur(0) grayscale(0);
+	// filter: blur(0) grayscale(0);
 }
 // .atoms > svg:nth-child(5n-1) {
 // 	filter: hue-rotate(58deg);
@@ -103,13 +103,17 @@
 	animation-delay: -7s;
 }
 
+.atoms > svg {
+	filter: blur(2px);
+}
+
 @keyframes fly {
 	0%,
 	100% {
 		transform: translateX(0);
 	}
 	50% {
-		transform: translateX(-1000px);
+		transform: translateX(-800px);
 	}
 }
 @keyframes flyMobile {
@@ -157,7 +161,7 @@ body {
 	width: 100%;
 	//max-width: 1600px;
 	font-family: Inter;
-	background: $main-black;
+	background: $bg;
 	overflow-x: hidden;
 	height: 100%;
 }
@@ -226,10 +230,10 @@ a {
 	transition: color 0.2s;
 	// TODO: change colors
 	&:hover {
-		color: #ffad31;
+		color: $text-accent;
 	}
 	&:active {
-		color: #ffad31;
+		color: $text-accent;
 	}
 	/*&:visited {
 		color: #0077ff;
@@ -375,4 +379,12 @@ h1 {
 			transform: translateY(0);
 		}
 	}
+}
+
+.title__date {
+	color: $text-accent;
+}
+
+.neon {
+	text-shadow: 0 4px 15px $neon-shadow;
 }

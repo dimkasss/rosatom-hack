@@ -157,8 +157,10 @@ window.addEventListener("resize", () => setTimeout(setCssHeight, 100));
 function init() {
   setCssHeight();
   const atomsPink = document.querySelectorAll("#oneAtom");
+  const heightGap = 600;
   atomsPink.forEach((atom, i) => {
-    atom.style.top = Math.random() * maxHeight + "px";
+    if (i * heightGap > maxHeight - heightGap) atom.style.opacity = 0; // extra atoms
+    atom.style.top = i * heightGap + "px";
     if (i % 2 == 0) atom.style.left = (Math.random() * maxWidth) / 2 + "px";
     else atom.style.right = Math.random() * maxWidth + "px";
     atom.style.width = "1350px";

@@ -237,6 +237,7 @@
 					font-weight: 900;
 					font-size: 80px;
 					line-height: 81%;
+					color: $text-secondary;
 
 					@media screen and (max-width: 1420px) {
 						font-size: 60px;
@@ -339,7 +340,7 @@
 						}
 					}
 					.time {
-						color: $text-normal;
+						color: $text-accent;
 						margin-left: 2%;
 					}
 				}
